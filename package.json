@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp dev",
-    "build":"gulp build",
+    "build":"npm i && gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Feisal Ahmed",
