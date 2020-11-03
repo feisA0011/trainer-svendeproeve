@@ -1,34 +1,14 @@
 @import "./css-reset";
 @import "./variables";
-@import "./fonts";
 @import "./navigation";
-@import "./header";
-@import "./contact";
+@import "./welcome";
+@import "./home";
+@import "./schedule";
+@import "./details";
 @import "./slider";
 @import "./footer";
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Arial", sans-serif;
 }
-
-.blogs {
-  width: 600px;
-  margin: 1rem auto;
-  background-color: #ae3ae3;
-  text-align: center;
-  display: grid;
-  gap: 2rem;
-  padding: 1rem;
-}
-// *{
-//    width: 375px;
-// }
-// @media screen and (min-width:768px){
-//     *{
-//         width:768px
-//     }
-// }
-// @media screen and (min-width:1024px){
-
-// }

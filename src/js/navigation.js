@@ -1,9 +1,11 @@
 const navSlide = () => {
-    const burger = document.querySelector('.burger');
+    const burger = document.querySelector('.nav__burger');
     const navContainer = document.querySelector('.nav-list');
     const navLinks = document.querySelectorAll('.nav-list li')
 
-    burger.addEventListener('click', () => {
+    burger.addEventListener('click', (e) => {
+        console.log('clicked')
+        //burger.classList.toggle('fa-times')
         if (navContainer) {
             navContainer.classList.toggle('nav-active')
             navLinks.forEach((link, index) => {
@@ -15,7 +17,7 @@ const navSlide = () => {
             })
         }
 
-        burger.classList.toggle('toggle')
+        burger.classList.toggle('fa-times')
     })
 }
 navSlide()

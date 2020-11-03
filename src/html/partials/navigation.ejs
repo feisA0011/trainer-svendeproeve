@@ -1,16 +1,19 @@
-<div class="burger">
-  <div class="line1"></div>
-  <div class="line2"></div>
-  <div class="line3"></div>
-</div>
+
 
 <nav class="nav">
-  <div class="logo">
-    <h3>Logo</h3>
+  <h1 class="nav__title">Popular classes</h1>
+  <div class="nav__icons">
+    <!-- <button class="navbar__back <% if (!back) { %>hidden<% } %>">
+      <i class="fas fa-fw fa-caret-left"></i>back
+    </button> -->
+    <i class="nav__back fas fa-caret-up <% if (back) { %>hidden<% } %>"></i>
+    <i  class="nav__burger fas fa-bars"></i>
+
   </div>
   <ul class="nav-list">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about?page=about">About</a></li>
-    <li><a href="/contact">Contact</a></li>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/search">Search</a></li>
+    <li><a href="/schedule">My schedule</a></li>
+    <li><a href="/login">log out</a></li>
   </ul>
 </nav>

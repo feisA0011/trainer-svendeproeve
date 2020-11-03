@@ -1,0 +1,43 @@
+.home {
+  padding: 1rem 2rem;
+  margin: 0;
+  height: 100vh;
+  margin-bottom: 3rem;
+
+  &__top {
+    background-color: $grey;
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    position: relative;
+  }
+  &__title {
+    position: absolute;
+    bottom: 3rem;
+    left: 1rem;
+    font-size: $fs-large;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+  &__title-btm {
+    margin: 1rem 0 2rem;
+    font-size: $fs-medium;
+    text-transform: capitalize;
+  }
+
+  &__btm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+  &__class-img {
+    border-radius: $br-1;
+  }
+  &__class-name {
+    padding: 20px 0;
+    text-transform: capitalize;
+    font-weight: 550;
+  }
+}
