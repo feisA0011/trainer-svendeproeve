@@ -117,7 +117,7 @@ gulp.task("dev", function (next) {
 });
 
 gulp.task("build", function (next) {
-    jss(next);
+    js(next);
     json(next);
     scss(next);
     images(next);
