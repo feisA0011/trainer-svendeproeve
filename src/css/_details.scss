@@ -1,4 +1,8 @@
 .details {
+  margin-bottom: 13rem;
+  //   width: 100%;
+  //   height: 100%;
+
   &__top {
     background-color: $grey;
     width: 100%;
@@ -20,25 +24,53 @@
     justify-content: space-between;
     align-items: center;
   }
-  &__box {
-    // position: absolute;
-    // bottom: 3rem;
-    // left: 2rem;
-  }
+
   &__title {
-    font-size: $fs-medium;
+    font-size: 2.7rem;
+    text-transform: capitalize;
+    color: #ffffff;
   }
 
   &__button {
-    // position: absolute;
-    // bottom: 3rem;
-    // right: 0;
-    -padding: 1rem 1rem;
+    position: absolute;
+    right: 0;
     font-size: $fs-medium;
     border-radius: 10px 0px 0 10px;
     border: grey 1px solid;
     background-color: #ffffff;
-    width: 10rem;
+    width: 8rem;
     height: 4rem;
+  }
+
+  //lower section
+
+  &__btm {
+    margin: 1rem 2rem;
+  }
+  &__btm-title {
+    font-size: $fs-medium;
+    text-transform: capitalize;
+  }
+  &__date-time {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  &__info {
+    margin: 1rem 0;
+  }
+  &__trainer-title {
+    margin: 1.5rem 0;
+    font-size: $fs-small;
+  }
+  &__trainer-info {
+    display: flex;
+    align-items: center;
+  }
+  &__trainer-img {
+    margin-right: 1rem;
+  }
+  &__trainer-text {
+    font-size: 1rem;
   }
 }

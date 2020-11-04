@@ -1,57 +1,94 @@
-const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(document.location.search);
 console.log(params)
-const galleryItem = document.querySelector('.gallery__item')
-const name = document.querySelector('.blog__name');
-const post = document.querySelector('.blog__post');
 
+let get_token = true;
 
+async function token() {
+    if (get_token = true) {
+        return fetch("https://trainers-api.herokuapp.com/auth/token", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "username=user1&password=1234"
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                get_token = data.token;
 
-//get all blog post 
-fetch("https://apijuk.herokuapp.com/blog-posts", {
-    "method": "GET"
-})
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        data.forEach(element => {
-            const blogTemplate = document.querySelector('.blog__template');
-            console.log(blogTemplate)
-            const blogContainer = document.querySelector('.blogs');
-            const clone = blogTemplate.content.cloneNode(true);
+            })
 
+    }
+}
+async function apiLink(url) {
+    data = await pageData(url);
+    return data;
+}
 
-            let string = JSON.stringify(element.content)
-
-
-            clone.querySelector('.blog__name').textContent = element.title
-            clone.querySelector('.blog__post').textContent = element.content.substr(0, 500)
-
-
-
-
-            blogContainer.appendChild(clone)
-        });
-
-
+function pageData(url) {
+    return fetch(url, {
+        method: 'GET',
 
     })
-    .catch(err => console.error(err));
+        .then(retrieve => retrieve.json())
+}
+(async function () {
+    const data = await apiLink('https://trainers-api.herokuapp.com/api/v1/classes/4');
+    const assetImg = await apiLink('https://trainers-api.herokuapp.com/api/v1/assets')
+    console.log(assetImg[7])
+    // const homeBgImg = document.querySelector('.home__top');
+    // console.log(homeBgImg)
+    console.log(data)
+    let img = document.querySelector('.test')
+    console.log(img)
+    // document.querySelector('.home__title').textContent = data.className;
+    // document.querySelector('.home__top').style.backgroundImage = `url(${data.asset.url})`
+    img.src = assetImg[7].url
 
-fetch("https://apijuk.herokuapp.com/gallery-photos", {
-    "method": "GET"
-})
-    .then(response => response.json())
-    .then(data => {
-        data.forEach(element => {
-            console.log(element.asset)
-            const template = document.querySelector('.template');
-            console.log(template)
-            const blogContainer = document.querySelector('.blogs');
-            const clone = template.content.cloneNode(true);
+})()
 
-            clone.querySelector('.temp-pic').innerHtml = element.asset
-            blogContainer.appendChild(clone)
+// token()
 
-        });
-    })
-    .catch(err => console.error(err));
+// async function getData(url) {
+//     fetch(url, {
+
+//         "method": "GET"
+//     })
+//         .then(response => response.json())
+
+// }
+// // getData()
+
+// async function apiLink(url) {
+//     data = await getData(url)
+//     return (data)
+// }
+
+// (async function () {
+//     const data = await apiLink('https://trainers-api.herokuapp.com/api/v1/classes');
+//     console.log(data)
+
+// })()
+
+// async function getData(api) {
+//     await token();
+//     let data = await myFetch.get(api)
+//     if (!data.error) {
+//         return data
+//     }
+//     else {
+//         get_token = true;
+//         await token(api)
+//         data = await myFetch.get(api);
+//         return data;
+//     }
+// }
+// getData()
+// fetch("https://trainers-api.herokuapp.com/api/v1/classes/1", {
+//     "method": "GET",
+
+// })
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+//     .catch(err => console.error(err));

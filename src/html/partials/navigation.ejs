@@ -1,12 +1,16 @@
 
-
 <nav class="nav">
+  <%# top bar navigation %>
   <h1 class="nav__title">Popular classes</h1>
   <div class="nav__icons">
     <!-- <button class="navbar__back <% if (!back) { %>hidden<% } %>">
       <i class="fas fa-fw fa-caret-left"></i>back
     </button> -->
-    <i class="nav__back fas fa-caret-up <% if (back) { %>hidden<% } %>"></i>
+    <div aria-label="Go Back" class="nav__back-icon <% if (!back) { %>hidden<% } %>">
+      <i class="nav__back fas fa-caret-up"></i>
+      <p>back</p>
+
+    </div>
     <i  class="nav__burger fas fa-bars"></i>
 
   </div>

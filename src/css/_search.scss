@@ -1,0 +1,67 @@
+.search {
+  margin: 0 2rem 12rem;
+  &__title {
+    font-size: $fs-large;
+    text-transform: capitalize;
+    margin: 1rem 0;
+  }
+  &__container {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  &__input {
+    padding: 1.2rem 2rem 1rem;
+    border: none;
+    background-color: #efefef;
+    border-radius: $br-2;
+    width: 100%;
+  }
+  &__icon {
+    position: absolute;
+    font-size: 1rem;
+    top: 1.2rem;
+    left: 12px;
+    color: $grey;
+  }
+  &__mid {
+    margin-bottom: 1rem;
+  }
+  &__mid-container {
+    display: flex;
+    overflow-x: auto;
+  }
+  &__mid-classes {
+    margin-right: 1rem;
+  }
+  &__img {
+    border-radius: $br-2;
+    margin-bottom: 0.9rem;
+  }
+  &__mid-title {
+    margin-bottom: 0.9rem;
+    text-transform: capitalize;
+  }
+  &__mid-rating {
+    margin-bottom: 0.9rem;
+  }
+  &__subtitle {
+    font-size: $fs-medium;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+  &__trainer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  &__trainer {
+    display: flex;
+    align-items: center;
+  }
+  &__img-small {
+    margin-right: 1rem;
+  }
+  &__name {
+    text-transform: capitalize;
+  }
+}
