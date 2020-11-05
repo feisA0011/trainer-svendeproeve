@@ -1,5 +1,5 @@
-const params = new URLSearchParams(document.location.search);
-console.log(params)
+const param = new URLSearchParams(window.location.search);
+console.log(param)
 
 let get_token = true;
 
@@ -21,6 +21,8 @@ async function token() {
 
     }
 }
+
+
 async function apiLink(url) {
     data = await pageData(url);
     return data;
@@ -33,20 +35,12 @@ function pageData(url) {
     })
         .then(retrieve => retrieve.json())
 }
-(async function () {
-    const data = await apiLink('https://trainers-api.herokuapp.com/api/v1/classes/4');
-    const assetImg = await apiLink('https://trainers-api.herokuapp.com/api/v1/assets')
-    console.log(assetImg[7])
-    // const homeBgImg = document.querySelector('.home__top');
-    // console.log(homeBgImg)
-    console.log(data)
-    let img = document.querySelector('.test')
-    console.log(img)
-    // document.querySelector('.home__title').textContent = data.className;
-    // document.querySelector('.home__top').style.backgroundImage = `url(${data.asset.url})`
-    img.src = assetImg[7].url
 
-})()
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    //document.querySelector('.nav__back').style.display = 'none'
+})
 
 // token()
 

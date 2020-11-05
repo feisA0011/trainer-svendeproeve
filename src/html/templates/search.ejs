@@ -9,12 +9,13 @@
             <i class="fas fa-search search__icon"></i>
             <input type="search" name="search" id="search" class="search__input"
             placeholder="Search classes">
+            <p class="searc__message"></p>
         </div>
         </section>
         <section class="search__mid">
             <h2 class="search__subtitle">popular classes</h2>
             <div class="search__mid-container">
-                <div class="search__mid-classes">
+                <!-- <div class="search__mid-classes">
                     <img class="search__img" src="https://via.placeholder.com/120" alt="">
                     <h3 class="search__mid-title">Daily go pro</h3>
                     <p class="search__mid-rating">rating ******</p>
@@ -28,7 +29,7 @@
                     <img class="search__img" src="https://via.placeholder.com/120" alt="">
                     <h3 class="search__mid-title">Daily go pro</h3>
                     <p class="search__mid-rating">rating ******</p>
-                </div>
+                </div> -->
             </div>
            
         </section>
@@ -36,7 +37,7 @@
             <h2 class="search__subtitle">popular trainers</h2>
             <div class="search__trainer-container">
 
-                <div class="search__trainer">
+                <!-- <div class="search__trainer">
                     <img class="search__img-small" src="https://via.placeholder.com/70" alt="">
                     <p class="search__name">davina jones</p>
                 </div>
@@ -47,10 +48,27 @@
                 <div class="search__trainer">
                     <img class="search__img-small" src="https://via.placeholder.com/70" alt="">
                     <p class="search__name">davina jones</p>
-                </div>
+                </div>  -->
             </div>
         </section>
     </article>
 </main>
+<template class="search__template">
+        <div class="search__mid-classes">
+            <img class="search__img" src="https://via.placeholder.com/120" alt="">
+            <h3 class="search__mid-title">Daily go pro</h3>
+            <p class="search__mid-rating">rating ******</p>
+        </div>
+</template>
+<template class="trainers__template">
+    <div class="search__trainer">
+        <div>
+            <img class="search__img-small" src="https://via.placeholder.com/70" alt="">
+        </div>
+        <p class="search__name">davina jones</p>
+    </div> 
+</template>
+<script src="../../../assets/js/index.js"></script>
+<script src="../../../assets/js/search.js"></script>
 <script src="../../../assets/js/navigation.js"></script>
 

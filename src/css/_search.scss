@@ -36,6 +36,9 @@
   &__img {
     border-radius: $br-2;
     margin-bottom: 0.9rem;
+    width: 140px;
+    height: 150px;
+    object-fit: fill;
   }
   &__mid-title {
     margin-bottom: 0.9rem;
@@ -60,6 +63,11 @@
   }
   &__img-small {
     margin-right: 1rem;
+    width: 70px;
+    height: 90px;
+    object-fit: fill;
+    border-radius: $br-1;
+    overflow: auto;
   }
   &__name {
     text-transform: capitalize;
