@@ -17,7 +17,7 @@
     <li><a href="/search">Search</a></li>
     <li><a href="/schedule">My schedule</a></li>
     <li class="login">log in</li>
-    <form method="GET" class="form"id="form" novalidate>
+    <form onsubmit="return validate(this)" method="GET" class="form"id="form" novalidate>
       <input type="text" name="name" id="form__name" value="" class="form_input form__name" placeholder="Username">
 
       <input type="password" id="form__password" value="" name="password" class="form_input form__password" placeholder="Password">

@@ -1,12 +1,14 @@
 const param = new URLSearchParams(window.location.search);
 console.log(param)
 
+
 let getToken;
 
 
 
-async function token() {
+function token() {
     if (getToken = true) {
+
         return fetch("https://trainers-api.herokuapp.com/auth/token", {
             method: "POST",
             headers: {
@@ -19,19 +21,18 @@ async function token() {
                 console.log(data)
                 getToken = data.token
                 let key = 'token'
-                sessionStorage.setItem(key, token)
+                sessionStorage.setItem(key, getToken)
 
-                //     fetch('https://trainers-api.herokuapp.com/v1/api/users/1', {
-                //         "method": "GET",
-                //         "headers": {
-                //             "": "",
-                //             "Authorization": "Bearer token"
-                //         }
+                // fetch('https://trainers-api.herokuapp.com/v1/api/users/1', {
+                //     method: "GET",
+                //     headers: {
+                //         "": "",
+                //         "Authorization": "Bearer " + getToken
                 //     })
-                //         .then(res => console.log(res))
-                //         .then(error => console.log(error))
 
-                // })
+
+
+
             })
 
     }
@@ -49,9 +50,9 @@ async function apiLink(url) {
 function pageData(url) {
     return fetch(url, {
         method: 'GET',
-        headers: {
-            'Authorization': 'Bearer ' + getToken
-        }
+        // headers: {
+        //     'Authorization': 'Bearer ' + getToken
+        // }
 
     })
         .then(retrieve => retrieve.json())
@@ -59,51 +60,35 @@ function pageData(url) {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    //document.querySelector('.nav__back').style.display = 'none'
+fetch('https://trainers-api.herokuapp.com/api/v1/classes/2/ratings', {
+    'method': 'GET'
 })
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(element => {
+            console.log(element)
 
-// token()
 
-// async function getData(url) {
-//     fetch(url, {
+            let list = ['one', 'two', 'three', 'four', 'five'];
 
-//         "method": "GET"
-//     })
-//         .then(response => response.json())
+            list.forEach(function (elem) {
+                document.getElementById(elem).addEventListener("click", function () {
+                    let cls = document.getElementById(elem).className;
 
-// }
-// // getData()
+                    if (cls.includes("unchecked")) {
+                        document.getElementById(elem).classList.remove("unchecked");
+                        document.getElementById(elem).classList.add("checked");
+                    }
+                    else {
 
-// async function apiLink(url) {
-//     data = await getData(url)
-//     return (data)
-// }
+                        document.getElementById(cls).disabled = true;
 
-// (async function () {
-//     const data = await apiLink('https://trainers-api.herokuapp.com/api/v1/classes');
-//     console.log(data)
+                        // document.getElementById(element).classList.remove("checked"); document.getElementById(element).classList.add("unchecked");
+                    }
+                });
+            });
+        })
+    })
+    .catch(err => console.error(err));
 
-// })()
 
-// async function getData(api) {
-//     await token();
-//     let data = await myFetch.get(api)
-//     if (!data.error) {
-//         return data
-//     }
-//     else {
-//         get_token = true;
-//         await token(api)
-//         data = await myFetch.get(api);
-//         return data;
-//     }
-// }
-// getData()
-// fetch("https://trainers-api.herokuapp.com/api/v1/classes/1", {
-//     "method": "GET",
-
-// })
-//     .then(response => response.json())
-//     .then(data => console.log(data))
-//     .catch(err => console.error(err));

@@ -3,7 +3,7 @@
 
     const list = await apiLink("https://trainers-api.herokuapp.com/api/v1/classes")
     //console.log(list)
-
+    document.querySelector('.spinner').style.display = 'none'
     document.querySelector('.home__title').innerText = data.className;
     document.querySelector('.home__top').style.backgroundImage = `url(${data.asset.url})`
 
@@ -12,6 +12,7 @@
         const homeTemplate = document.querySelector(".home__template")
         const container = document.querySelector(".home__btm");
         const clone = homeTemplate.content.cloneNode(true);
+        document.querySelector('.spinner1').style.display = 'none'
 
         clone.querySelector(".home__class-name").innerText = element.className;
         clone.querySelector(".home__class-img").src = element.asset.url

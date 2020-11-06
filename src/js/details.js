@@ -2,10 +2,9 @@
     const detailsId = param.get('id');
     let details = await apiLink(`https://trainers-api.herokuapp.com/api/v1/classes/${detailsId}`);
     let trainer = await apiLink(`https://trainers-api.herokuapp.com/api/v1/trainers/${details.trainer.id}`)
-    // let trainers = await apiLink(`https://trainers-api.herokuapp.com/api/v1/trainers`);
 
-    // console.log(trainers)
-    console.log(details)
+    document.querySelector('.spinner').style.display = 'none'
+    document.querySelector('.spinner1').style.display = 'none'
 
     document.querySelector('.details__title').innerText = details.className;
     document.querySelector('.details__top').style.backgroundImage = `url(${details.asset.url})`
