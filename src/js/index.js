@@ -30,9 +30,15 @@ function token() {
                 //         "Authorization": "Bearer " + getToken
                 //     })
 
+<<<<<<< HEAD
 
 
 
+=======
+                // })
+            
+                "Authorization": "Bearer " + getToken
+>>>>>>> bc6c9d22ac6df29649842bf3086489866d2f6abf
             })
 
     }
@@ -92,3 +98,50 @@ fetch('https://trainers-api.herokuapp.com/api/v1/classes/2/ratings', {
     .catch(err => console.error(err));
 
 
+<<<<<<< HEAD
+=======
+// token()
+
+// async function getData(url) {
+//     fetch(url, {
+
+//         "method": "GET"
+//     })
+//         .then(response => response.json())
+
+// }
+// // getData()
+
+// async function apiLink(url) {
+//     data = await getData(url)
+//     return (data)
+// }
+
+// (async function () {
+//     const data = await apiLink('https://trainers-api.herokuapp.com/api/v1/classes');
+//     console.log(data)
+
+// })()
+
+// async function getData(api) {
+//     await token();
+//     let data = await myFetch.get(api)
+//     if (!data.error) {
+//         return data
+//     }
+//     else {
+//         get_token = true;
+//         await token(api)
+//         data = await myFetch.get(api);
+//         return data;
+//     }
+// }
+// getData()
+// fetch("https://trainers-api.herokuapp.com/api/v1/classes/1", {
+//     "method": "GET",
+
+// })
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+//     .catch(err => console.error(err));
+>>>>>>> bc6c9d22ac6df29649842bf3086489866d2f6abf
