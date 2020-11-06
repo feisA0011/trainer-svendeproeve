@@ -1,14 +1,12 @@
 
-<nav class="nav">
+<nav class="nav" style="margin-top: 2rem;">
   <%# top bar navigation %>
-  <h1 class="nav__title">Popular classes</h1>
+
   <div class="nav__icons">
-    <!-- <button class="navbar__back <% if (!back) { %>hidden<% } %>">
-      <i class="fas fa-fw fa-caret-left"></i>back
-    </button> -->
-    <div aria-label="Go Back" class="nav__back-icon <% if (!back) { %>hidden<% } %>">
-      <i class="nav__back fas fa-caret-up"></i>
-      <!-- <p>back</p> -->
+
+    <div aria-label="Go Back" class="nav__back-icon " style="display: flex; align-items: center;">
+      <i class="nav__back fas fa-caret-left" style="color:#F4A88E; margin-right:10px ;"></i>
+      <p>back</p>
 
     </div>
     <i  class="nav__burger fas fa-bars"></i>
@@ -18,6 +16,16 @@
     <li><a href="/home">Home</a></li>
     <li><a href="/search">Search</a></li>
     <li><a href="/schedule">My schedule</a></li>
-    <li><a href="/login">log out</a></li>
+    <li class="login">log in</li>
+    <form method="GET" class="form"id="form" novalidate>
+      <input type="text" name="name" id="form__name" value="" class="form_input form__name" placeholder="Username">
+
+      <input type="password" id="form__password" value="" name="password" class="form_input form__password" placeholder="Password">
+
+      <div class="error-message">wrong</div>
+
+      <input type="submit" class="form__btn"></input>
+  </form>
   </ul>
 </nav>
+

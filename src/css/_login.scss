@@ -1,0 +1,30 @@
+.form {
+  display: grid;
+  margin: 0 5rem;
+  //   gap: 1rem;
+  display: none;
+
+  &__btn {
+    width: 7rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: $br-2;
+    justify-self: right;
+    background-color: #f4a88e;
+    color: #ffffff;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+  }
+}
+.form_input {
+  padding: 0.7rem 0.9rem;
+  border-radius: $br-2;
+  outline: none;
+  margin: 0.9rem 0;
+}
+.error-message {
+  padding: 0 0 1rem;
+}
+// #form {
+//   display: none;
+// }

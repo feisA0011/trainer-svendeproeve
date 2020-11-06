@@ -5,12 +5,12 @@
     <article class="search">
         <section class="search__top">
             <h1 class="search__title">search</h1>
-        <div class="search__container"> 
+        <form autocomplete="off" class="search__container"> 
             <i class="fas fa-search search__icon"></i>
             <input type="search" name="search" id="search" class="search__input"
             placeholder="Search classes">
             <p class="searc__message"></p>
-        </div>
+        </form>
         </section>
         <section class="search__mid">
             <h2 class="search__subtitle">popular classes</h2>
@@ -55,7 +55,10 @@
 </main>
 <template class="search__template">
         <div class="search__mid-classes">
-            <img class="search__img" src="https://via.placeholder.com/120" alt="">
+            <div>
+
+                <img class="search__img" src="https://via.placeholder.com/120" alt="">
+            </div>
             <h3 class="search__mid-title">Daily go pro</h3>
             <p class="search__mid-rating">rating ******</p>
         </div>
@@ -71,4 +74,6 @@
 <script src="../../../assets/js/index.js"></script>
 <script src="../../../assets/js/search.js"></script>
 <script src="../../../assets/js/navigation.js"></script>
+<script src="../../../assets/js/login.js"></script>
+
 

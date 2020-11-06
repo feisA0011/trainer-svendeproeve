@@ -21,3 +21,8 @@ const navSlide = () => {
     })
 }
 navSlide()
+
+document.querySelector('.nav__back-icon').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.history.back();
+});

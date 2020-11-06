@@ -1,10 +1,12 @@
 const param = new URLSearchParams(window.location.search);
 console.log(param)
 
-let get_token = true;
+let getToken;
+
+
 
 async function token() {
-    if (get_token = true) {
+    if (getToken = true) {
         return fetch("https://trainers-api.herokuapp.com/auth/token", {
             method: "POST",
             headers: {
@@ -15,22 +17,41 @@ async function token() {
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                get_token = data.token;
+                getToken = data.token
+                let key = 'token'
+                sessionStorage.setItem(key, token)
 
+                //     fetch('https://trainers-api.herokuapp.com/v1/api/users/1', {
+                //         "method": "GET",
+                //         "headers": {
+                //             "": "",
+                //             "Authorization": "Bearer token"
+                //         }
+                //     })
+                //         .then(res => console.log(res))
+                //         .then(error => console.log(error))
+
+                // })
             })
 
     }
 }
 
 
+
 async function apiLink(url) {
     data = await pageData(url);
+    getToken = await token()
+
     return data;
 }
 
 function pageData(url) {
     return fetch(url, {
         method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + getToken
+        }
 
     })
         .then(retrieve => retrieve.json())
