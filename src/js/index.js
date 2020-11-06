@@ -32,6 +32,8 @@ async function token() {
                 //         .then(error => console.log(error))
 
                 // })
+            
+                "Authorization": "Bearer " + getToken
             })
 
     }
