@@ -3,11 +3,11 @@ let formName = document.getElementById('form__name');
 const form = document.querySelector('.form');
 let message = document.querySelector('.error-message');
 
-// loginButton.addEventListener('click', (e) => {
+loginButton.addEventListener('click', (e) => {
 
-//     form.style.display = "block"
+    form.style.display = "block"
 
-// });
+});
 
 
 // form.addEventListener('submit', (e) => {
